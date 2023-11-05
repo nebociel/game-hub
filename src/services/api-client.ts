@@ -1,5 +1,10 @@
 import axios from 'axios';
 
+export interface FetchResponse<T> {
+  count: number;
+  results: T[];
+}
+
 // ccfgwofcwbyprdwbhh@ckptr.com
 // ccfgwo
 export default axios.create({
