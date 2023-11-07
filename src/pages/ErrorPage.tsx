@@ -1,13 +1,13 @@
-import { Heading, Text, Box, Button, VStack } from '@chakra-ui/react';
-import { isRouteErrorResponse, useRouteError } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Box, Button, Heading, Text, VStack } from '@chakra-ui/react';
+import { AxiosError } from 'axios';
+import { Link, isRouteErrorResponse, useRouteError } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 
 const ErrorPage = () => {
-  const error = useRouteError();
+  const error = useRouteError() as AxiosError;
 
   // Function to provide a more detailed message based on the error status code
-  const getErrorMessage = (error) => {
+  const getErrorMessage = (error: AxiosError) => {
     if (!isRouteErrorResponse(error)) {
       return 'An unexpected error occurred. Please try again later.';
     }

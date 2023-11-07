@@ -2,9 +2,9 @@ import { useParams } from 'react-router-dom';
 import useGame from '../hooks/useGame';
 import { Heading, Spinner, Text } from '@chakra-ui/react';
 
-function GameDescription({ game }) {
-  return <div dangerouslySetInnerHTML={{ __html: game.description }} />;
-}
+// function GameDescription({ game }) {
+//   return <div dangerouslySetInnerHTML={{ __html: game.description }} />;
+// }
 
 const GameDetailPage = () => {
   const { slug } = useParams();
