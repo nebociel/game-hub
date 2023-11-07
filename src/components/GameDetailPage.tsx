@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import useGame from '../hooks/useGame';
 import ExpandableText from './ExpandableText';
 import GameAttributes from './GameAttributes';
+import GameTrailer from './GameTrailer';
 
 // function GameDescription({ game }) {
 //   return <div dangerouslySetInnerHTML={{ __html: game.description }} />;
@@ -21,6 +22,7 @@ const GameDetailPage = () => {
       <ExpandableText>{game.description_raw}</ExpandableText>
       {/* <GameDescription game={game} /> */}
       <GameAttributes game={game} />
+      <GameTrailer gameId={game.id} />
     </>
   );
 };
