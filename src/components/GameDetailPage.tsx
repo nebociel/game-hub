@@ -4,6 +4,7 @@ import useGame from '../hooks/useGame';
 import ExpandableText from './ExpandableText';
 import GameAttributes from './GameAttributes';
 import GameTrailer from './GameTrailer';
+import GameScreenshots from './GameScreenshots';
 
 // function GameDescription({ game }) {
 //   return <div dangerouslySetInnerHTML={{ __html: game.description }} />;
@@ -23,6 +24,7 @@ const GameDetailPage = () => {
       {/* <GameDescription game={game} /> */}
       <GameAttributes game={game} />
       <GameTrailer gameId={game.id} />
+      <GameScreenshots gameId={game.id} />
     </>
   );
 };
