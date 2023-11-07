@@ -10,7 +10,7 @@ const ExpandableText = ({ children }: Props) => {
   const limit = 300;
 
   if (!children) return <Text>No description available</Text>;
-  
+
   if (children.length <= limit) return <Text>{children}</Text>;
 
   const summary = expanded ? children : children.slice(0, limit) + '...';
